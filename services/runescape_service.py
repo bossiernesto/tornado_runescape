@@ -1,6 +1,5 @@
 import requests as r
 import logging
-import ipdb
 import functools
 
 foldl = lambda func, acc, xs: functools.reduce(func, xs, acc)
@@ -16,7 +15,7 @@ class RunescapePricesAPI():
     }
 
     def __init__(self):
-        self.total_per_page = 30
+        self.total_per_page = 10
 
     def get_all_items(self):
         """ Makes an API request to the given endpoint and returns a dictionary containing the data
